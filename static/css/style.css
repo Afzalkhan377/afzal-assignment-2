@@ -1,0 +1,68 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;  /* Light background for better contrast */
+    margin: 0;  /* Remove default margin */
+    padding: 0;  /* Remove default padding */
+}
+
+/* Container Styles */
+.container {
+    width: 80%;
+    max-width: 1200px;  /* Maximum width for larger screens */
+    margin: 0 auto;  /* Center the container */
+    text-align: center;
+    padding: 20px;  /* Add padding inside the container */
+    background-color: #ffffff;  /* White background for the container */
+    border-radius: 10px;  /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+}
+
+/* Button Styles */
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;  /* Green background */
+    color: white;  /* White text color */
+    border: none;  /* Remove border */
+    border-radius: 5px;  /* Rounded corners */
+    cursor: pointer;  /* Pointer cursor on hover */
+    transition: background-color 0.3s;  /* Smooth transition */
+}
+
+button:hover {
+    background-color: #45a049;  /* Darker green on hover */
+}
+
+/* Plot Area Styles */
+#plot {
+    margin-top: 20px;
+    border: 1px solid #ddd;  /* Light border around the plot */
+    border-radius: 5px;  /* Rounded corners */
+    background-color: #fff;  /* White background for the plot area */
+}
+
+/* Centroid Container Styles */
+#centroid-container {
+    display: flex;
+    gap: 10px;  /* Space between centroid boxes */
+    margin-bottom: 20px;
+    justify-content: center;  /* Center the items */
+}
+
+/* Draggable Centroid Styles */
+.draggable-centroid {
+    width: 120px;
+    padding: 10px;
+    background-color: #f5a623;  /* Orange background */
+    text-align: center;  /* Center text */
+    cursor: grab;  /* Hand cursor for draggable items */
+    border-radius: 5px;  /* Rounded corners */
+    user-select: none;  /* Prevent text selection */
+    transition: transform 0.2s;  /* Smooth transform transition */
+}
+
+.draggable-centroid:active {
+    cursor: grabbing;  /* Change cursor while dragging */
+    transform: scale(0.98);  /* Slightly shrink when active */
+}

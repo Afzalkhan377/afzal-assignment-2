@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMeans Clustering Algorithm</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.4.2/plotly.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>KMeans Clustering Algorithm</h1>
+        <div>
+            <label for="k">Number of Clusters (k):</label>
+            <input type="number" id="k" value="3">
+        </div>
+        <div>
+            <label for="method">Initialization Method:</label>
+            <select id="method">
+                <option value="Random">Random</option>
+                <option value="Farthest First">Farthest First</option>
+                <option value="KMeans++">KMeans++</option>
+                <option value="Manual">Manual</option>
+            </select>
+            
+        </div>
+        <button id="generate-dataset">Generate New Dataset</button>
+        <button id="initialize-kmeans">Initialize</button>
+        <button id="step-kmeans">Step Through KMeans</button>
+        <button id="converge-kmeans">Run to Convergence</button>
+        <button id="reset-kmeans">Reset Algorithm</button>
+        <div id="plot"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+</body>
+</html>
+
