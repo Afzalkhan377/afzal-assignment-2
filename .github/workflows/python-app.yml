@@ -1,4 +1,4 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# This workflow will install Python dependencies, run tests, and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 name: Python application
 
@@ -34,17 +34,16 @@ jobs:
         make run &
         sleep 10  # Adjust this if the server needs more or less time to start
 
-    # (Optional) You can add test steps here if applicable
-    # Test server responses or functionality after it is up and running
-    # Example placeholder for tests, customize if needed
+    # (Optional) Test server responses or functionality after it is up and running
     - name: Run tests (optional)
       run: |
         curl http://localhost:3000  # Example of a test, you can replace with your actual test logic
 
-    # (Optional) Lint the code
-  - name: Lint with flake8
-  run: |
-    pip install flake8
-    flake8 . --exclude=venv --count --select=E9,F63,F7,F82 --show-source --statistics
-    flake8 . --exclude=venv --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    # Lint the code
+    - name: Lint with flake8
+      run: |
+        pip install flake8
+        flake8 . --exclude=venv --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 . --exclude=venv --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
 
